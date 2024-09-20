@@ -9,7 +9,7 @@ import seaborn as sns
 import locale
 
 # Configurar el idioma a español
-locale.setlocale(locale.LC_TIME, 'Spanish_Spain') 
+locale.setlocale(locale.LC_TIME, 'es_ES') 
 
 st.set_page_config(
     page_title='Reporte SIMOVA',
