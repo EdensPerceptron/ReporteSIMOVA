@@ -162,12 +162,19 @@ def graficos(indicator):
             zmax=heatmap_data.max().max(),  # Definir el valor máximo del color
         )
     )
+    # Ajustes en las etiquetas del eje Y
+    heatmap_fig.update_layout(
+        yaxis=dict(
+            tickfont=dict(size=10)  # Ajustar el tamaño de las etiquetas del eje Y
+        ),
+        margin=dict(l=150)  # Ajustar el margen izquierdo para dar más espacio a las etiquetas
+    )
 
     # Simular espaciado entre celdas (agregar bordes blancos finos)
     heatmap_fig.update_traces(
         hoverongaps=False,  # Evitar mostrar información en celdas sin valor
-        xgap=1,  # Espaciado horizontal entre celdas
-        ygap=1   # Espaciado vertical entre celdas
+        xgap=0.5,  # Espaciado horizontal entre celdas
+        ygap=0.5   # Espaciado vertical entre celdas
     )
 
     # Personalizar el layout del heatmap
