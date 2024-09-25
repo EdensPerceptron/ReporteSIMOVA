@@ -32,6 +32,16 @@ if uploaded_file is None:
     st.info("Cargue un archivo",icon="🚨")
     st.stop()
 df=load_data(uploaded_file)
+
+# Lista con los nuevos nombres de columna
+columnas_portugues = [
+    'Código Técnico', 'Nome Técnico', 'Função', 'Filial', 'Hora Entrada', 
+    'Hora Saída', 'Total Horas Turno', 'Horas Paradas Prod.', 'Horas Paradas Improd.',
+    'Total Horas Perdas', 'Total Horas Trabalhadas', 'Total Horas Deslocamento']
+
+# Cambiar los nombres de las columnas del DataFrame
+df.columns = columnas_portugues
+
 df = df.dropna(subset=['Nome Técnico'])
 
 
