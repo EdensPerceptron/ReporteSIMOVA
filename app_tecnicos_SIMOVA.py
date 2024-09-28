@@ -61,8 +61,8 @@ import pandas as pd
 df['Hora Saída'] = pd.to_datetime(df['Hora Saída'], format='%d/%m/%Y %H:%M:%S')
 inicio_semana = pd.to_datetime('16:30:00').time()
 fin_semana = pd.to_datetime('22:00:00').time()
-inicio_sabado = pd.to_datetime('14:00:00').time()
-fin_sabado = pd.to_datetime('20:00:00').time()
+inicio_sabado = pd.to_datetime('12:30:00').time()
+fin_sabado = pd.to_datetime('22:00:00').time()
 def verificar_salida_correcta(row):
     # Si es sábado (weekday() == 5)
     if row['Hora Saída'].weekday() == 5:
