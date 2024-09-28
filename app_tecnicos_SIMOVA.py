@@ -65,7 +65,7 @@ df['Cumple Salida Correcta'] = ((df['Hora Saída'].dt.time >= inicio) & (df['Hor
 df['Total Horas Deslocamento']=pd.to_timedelta(df['Total Horas Deslocamento'])
 
 # General
-df['Calificacion General'] = ((df['Cumple Ingreso a tiempo'] + df['Cumple Menos de una hora improd.'] + df['Cumple Salida Correcta'])==3).astype(int)
+df['Calificacion General'] = ((df['Cumple Ingreso a tiempo'] + df['Cumple Salida Correcta'])==2).astype(int)
 df['Fecha'] = df['Hora Entrada'].dt.date
 
 with st.expander("Previsualización de datos"):
