@@ -47,8 +47,9 @@ df = df.dropna(subset=['Nome Técnico'])
 
 # Marcación Entrada
 df['Hora Entrada']= pd.to_datetime(df['Hora Entrada'], format='%d/%m/%Y %H:%M:%S', errors='coerce')
-hora_referencia = time(8,45,0)
-df['Cumple Ingreso a tiempo'] = (df['Hora Entrada'].dt.time <= hora_referencia).astype(int)
+hora_1 = time(4,0,0)
+hora_2 = time(8,45,0)
+df['Cumple Ingreso a tiempo'] = ((df['Hora Entrada'].dt.time <= hora_2) & (df['Hora Entrada'].dt.time >= hora_1)).astype(int)
 
 #Horas improductivas
 df['Horas Paradas Improd.'] = pd.to_timedelta(df['Horas Paradas Improd.'])
