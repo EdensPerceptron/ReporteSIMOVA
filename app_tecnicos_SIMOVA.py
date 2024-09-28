@@ -202,9 +202,9 @@ fig, heatmap_fig = graficos(indicator1)
 #st.plotly_chart(fig)
 st.plotly_chart(heatmap_fig)
 
-fig2, heatmap_fig2 = graficos(indicator2)
+#fig2, heatmap_fig2 = graficos(indicator2)
 #st.plotly_chart(fig2)
-st.plotly_chart(heatmap_fig2)
+#st.plotly_chart(heatmap_fig2)
 
 fig3, heatmap_fig3 = graficos(indicator3)
 #st.plotly_chart(fig3)
