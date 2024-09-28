@@ -58,7 +58,7 @@ df['Cumple Menos de una hora improd.'] = (df['Horas Paradas Improd.'] <= pd.Time
 # Marcacion de salida
 df['Hora Saída'] = pd.to_datetime(df['Hora Saída'], format='%d/%m/%Y %H:%M:%S')
 inicio = pd.to_datetime('16:30:00').time()
-fin = pd.to_datetime('19:00:00').time()
+fin = pd.to_datetime('22:00:00').time()
 df['Cumple Salida Correcta'] = ((df['Hora Saída'].dt.time >= inicio) & (df['Hora Saída'].dt.time <= fin)).astype(int)
 
 # Traslado
